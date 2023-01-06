@@ -1,0 +1,211 @@
+<app-header></app-header>
+<div class="container row ctn-fs">
+  <div style="width:25%"></div>
+  <div class="flex carousel">
+    <img src="/assets/images/carousel-1.jpg" alt="">
+  </div>
+</div>
+<div class="container row ctn-sb font-bold icons-text">
+  <div class="row grey-border icon-with-text">
+    <i class="fa fa-check"></i>
+    Quality Product
+  </div>
+  <div class="row grey-border icon-with-text">
+    <i class="fa fa-shipping-fast"></i>
+    Free Shipping
+  </div>
+  <div class="row grey-border icon-with-text">
+    <i class="fa fa-exchange-alt"></i>
+    14-Day Return
+  </div>
+  <div class="row grey-border icon-with-text">
+    <i class="fa fa-phone-volume"></i>
+    24/7 Support
+  </div>
+</div>
+<ng-template #catInfo let-info='info'>
+  <div class=" items grey-border col col-lg-4">
+    <div>
+      <p class="txt-r">{{info.count}} products</p>
+    </div>
+    <div style="overflow: hidden;"><a href=""><img class="scale-image" src="/assets/images/{{info.imagePath}}"
+          alt="{{info.imagePath}}"></a></div>
+    <div class="font-bold icon-with-text">{{info.name}}</div>
+  </div>
+</ng-template>
+
+<div class="container row ">
+  <ng-container *ngFor="let info of categoriesInfo">
+    <ng-container *ngTemplateOutlet="catInfo; context:{info:info}">
+    </ng-container>
+  </ng-container>
+
+</div>
+
+<div class="container row ctn-sb">
+  <div class="bg-second  row  ctn-sb center" style="width:49%">
+    <div class="flex" style="padding-top:5%"><img src="/assets/images/leftGirl.png" alt="" height="150"></div>
+    <div class="col txt-r " style="padding-right:5%">
+      <div class="pink-small-text font-bold">20% OFF THE ALL ORDER</div>
+      <div class="font-bold collection-text">Spring Collection</div>
+      <div><input type="button" value="Shop now" class="pink-btn"></div>
+    </div>
+  </div>
+  <div class="bg-second  row ctn-sb center" style="width:49%">
+    <div class=" col " style="padding-left:5%">
+      <div class="pink-small-text font-bold">20% OFF THE ALL ORDER</div>
+      <div class="font-bold collection-text">Winter Collection</div>
+      <div><input type="button" value="Shop now" class="pink-btn"></div>
+    </div>
+    <div class="flex" style="padding-top:5%"><img src="/assets/images/rightGirl.png" alt="" height="150"></div>
+  </div>
+</div>
+<ng-template #items>
+  <div class="container row ctn-sb">
+    <div class="col grey-border item" *ngFor="let item of itemsInfo">
+      <div class="grey-bottom flex" style="overflow: hidden;">
+        <img class="scale-image" src="/assets/images/{{item.imagePath}}" alt="{{item.imagePath}}">
+      </div>
+      <div style="text-align: center;padding: 6% 0">
+        <div>{{item.name}}</div>
+        <div>${{item.price}} <s class="">${{item.price}}</s></div>
+      </div>
+      <div class="row  ctn-sb grey-top" style="font-size: 0.6rem; padding: 4%;">
+        <div class="row">
+          <i class="fas fa-eye"></i>
+          <a href="" class="menu-link " style="padding-left: 5%;"> View Detail</a>
+        </div>
+        <div class="row">
+          <i class="fas fa-shopping-cart"></i>
+          <a href="" class="menu-link " style="padding-left: 5%;"> Add to Cart</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</ng-template>
+
+<div style="text-align: center;">
+  Trandy Products
+</div>
+<ng-container *ngTemplateOutlet="items">
+</ng-container>
+
+<div class="bg-second container col">
+  <div class="flex">Stay Updated</div>
+  <div class="flex">Amet lorem at rebum amet dolores. Elitr lorem dolor sed amet diam labore at justo ipsum eirmod duo
+    labore labore.</div>
+  <div class="row">
+    <input type="email" placeholder="Email Go Hear">
+    <input class="form-contol subscribe-btn" type="button" value="Subscribe">
+  </div>
+</div>
+<div class="container col">
+  <div>Just arrived</div>
+  <div>
+    <ng-container *ngTemplateOutlet="items">
+    </ng-container>
+  </div>
+</div>
+<div class="bg-second container ctn-sb">
+  <div class="col">
+    <div>Loggo</div>
+    <div>alabala</div>
+    <div>
+      <div><img src="" alt=""></div>
+      123 Street, New York, USA
+    </div>
+    <div>
+      <div><img src="" alt=""></div>
+      mail@domain.com
+    </div>
+    <div>
+      <div><img src="" alt=""></div>
+      +012 345 67890
+    </div>
+  </div>
+  <div class="col">
+    <div><b>Quick Links</b></div>
+    <div>
+      <div><img src="" alt=""></div>
+      <a href="">Home</a>
+    </div>
+    <div>
+      <div><img src="" alt=""></div>
+      <a href="">Our Shop</a>
+    </div>
+    <div>
+      <div><img src="" alt=""></div>
+      <a href="">Shop Detail</a>
+    </div>
+    <div>
+      <div><img src="" alt=""></div>
+      <a href="">Shopping Cart</a>
+    </div>
+    <div>
+      <div><img src="" alt=""></div>
+      <a href="">Checkout</a>
+    </div>
+    <div>
+      <div><img src="" alt=""></div>
+      <a href="">Contact Us</a>
+    </div>
+  </div>
+  <div class="col">
+    <div><b>Quick Links</b></div>
+    <div>
+      <div><img src="" alt=""></div>
+      <a href="">Home</a>
+    </div>
+    <div>
+      <div><img src="" alt=""></div>
+      <a href="">Our Shop</a>
+    </div>
+    <div>
+      <div><img src="" alt=""></div>
+      <a href="">Shop Detail</a>
+    </div>
+    <div>
+      <div><img src="" alt=""></div>
+      <a href="">Shopping Cart</a>
+    </div>
+    <div>
+      <div><img src="" alt=""></div>
+      <a href="">Checkout</a>
+    </div>
+    <div>
+      <div><img src="" alt=""></div>
+      <a href="">Contact Us</a>
+    </div>
+  </div>
+  <div class="col">
+    <div><b>Newsletter</b></div>
+    <form class="col">
+      <div class="row">
+        <input class="form-contol  sub-inputs" type="text" placeholder="Your Name">
+      </div>
+      <div class="row">
+        <input class="form-contol sub-inputs" type="email" placeholder="Your Email">
+      </div>
+      <div class="row">
+        <input class="form-contol sub-inputs subscribe-btn" type="button" value="Subscribe Now">
+      </div>
+    </form>
+  </div>
+  <div class=" row " style="border-top: 1px solid #fff; padding: 10px 0;">
+    <div style="flex-grow: 1;">
+      © <a href=""><b>Your Site Name</b> </a>. All Rights Reserved. Designed by
+      <a href="https://htmlcodex.com/"><b>HTML Codex</b></a>
+    </div>
+    <div class="row ctn-sb">
+      <img src="/assets/images/card_types/visa.png" alt="Visa">
+      <img src="/assets/images/card_types/mastercard.png" alt="MasterCard">
+      <img src="/assets/images/card_types/paypal.png" alt="PayPal">
+      <img src="/assets/images/card_types/american-express.png" alt="American Express">
+      <img src="/assets/images/card_types/visa-electron.png" alt="Visa Electron">
+      <img src="/assets/images/card_types/maestro.png" alt="Maestro">
+    </div>
+  </div>
+</div>
+<div>
+  Ads
+</div>

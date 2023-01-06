@@ -1,0 +1,89 @@
+<div class="bg-second container ">
+  <div class="row ctn-fs" style="flex-grow: 1">
+    <a href="http://" class="link r-p1">FAQs</a>
+    <span class="r-p1">|</span>
+    <a href="http://" class="link r-p1">Help</a>
+    <span class="r-p1">|</span>
+    <a href="http://" class="link r-p1">Support</a>
+  </div>
+
+  <div class="row ctn-fe">
+    <a href="http://www.facebook.com" class="l-p14"><i class="fab fa-facebook-f "></i></a>
+    <a href="http://www.twitter.com" class="l-p14"><i class="fab fa-twitter "></i></a>
+    <a href="http://www.linkedIn.com" class="l-p14"><i class="fab fa-linkedin-in "></i></a>
+    <a href="http://www.instagram.com" class="l-p14"><i class="fab fa-instagram "></i></a>
+    <a href="http://www.youtube.com" class="l-p14"><i class="fab fa-youtube "></i></a>
+  </div>
+</div>
+<div class="container column ctn-sb">
+  <div class="font-bold" style="font-size:1.7rem; margin:15px 0;width:20%;">
+    <span class="pink grey-border " style="padding: 15px">E</span>
+    <span><b>Shopper</b> </span>
+  </div>
+  <div class=" row ctn-sb" style="width:75%;">
+    <div class=" row ctn-sb" style="width:60%;">
+      <div class="grey-border" style="width:95%;">
+        <input class="form-contol" type="text" placeholder="Search for products">
+      </div>
+      <div class="grey-border flex" style="width:5%;justify-content:center">
+        <i class="fa fa-search">
+        </i>
+      </div>
+    </div>
+    <div class=" row ctn-fe" style="width:20%;">
+      <a class=" row grey-border counter-link ">
+        <i class="fas fa-heart"></i>
+        <span class="counter">{{likes}}</span>
+      </a>
+      <a class=" row grey-border counter-link">
+        <i class="fas fa-shopping-cart"></i>
+        <span class="counter">{{productsCount}}</span>
+      </a>
+    </div>
+  </div>
+</div>
+<div class="container row grey-top ctn-sb">
+  <div style="width: 20%;">
+    <div class="row categories-btn  ctn-sb">
+      <div class="flex"><b>Categories</b></div>
+      <span class="arrow-down"><b>&#x2304;</b></span>
+    </div>
+    <ul class="dropdown">
+      <ng-container *ngFor="let cat of categories">
+        <li class="row ctn-sb grey-border category" style="z-index: 10;">
+          {{cat.name}}
+          <span class="arrow-down" *ngIf="cat.subcategories.length>0">&#x2304;</span>
+          <!-- <ul class="dropdown bg-second" *ngIf="cat.subcategories.length>0">
+            <ng-container *ngFor="let subCat of cat.subcategories">
+              <li class="row " style="z-index: 11;">
+                {{subCat.name}}
+              </li>
+            </ng-container>
+          </ul> -->
+        </li>
+      </ng-container>
+    </ul>
+  </div>
+  <div class="row ctn-sb" style="width: 75%;">
+    <div class="row ctn-sb">
+      <a href="" class="menu-link lr-p3">Home</a>
+      <a href="" class="menu-link lr-p3">Shop</a>
+      <a href="" class="menu-link lr-p3">Shop Detail</a>
+      <div class="column  ctn-sb pages" style="position: relative;">
+        <div class="row menu-link  ctn-sb">
+          <div>Pages</div>
+          <div class="arrow-down">&#x2304;</div>
+        </div>
+        <ul style="position: absolute;">
+          <li><a href="" class="menu-link lr-p3">Shopping Cart</a></li>
+          <li><a href="" class="menu-link lr-p3">Checkout</a></li>
+        </ul>
+      </div>
+      <a href="" class="menu-link lr-p3">Contact</a>
+    </div>
+    <div class="row ctn-sa">
+      <a href="" class="menu-link lr-p3">Login</a>
+      <a href="" class="menu-link lr-p3">Register</a>
+    </div>
+  </div>
+</div>
