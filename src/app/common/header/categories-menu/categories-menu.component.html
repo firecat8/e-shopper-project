@@ -1,0 +1,19 @@
+<div class="row categories-btn  ctn-sb" (click)="onClick()">
+  <div class="flex"><b>Categories</b></div>
+  <span class="arrow-down"><b>&#x2304;</b></span>
+</div>
+<ul class="dropdown" [ngClass]="isOpen?'open':'close'">
+  <ng-container *ngFor="let cat of categories">
+    <li class="row ctn-sb grey-border category" style="z-index: 10;">
+      {{cat.name}}
+      <span class="arrow-down" *ngIf="cat.subcategories.length>0">&#x2304;</span>
+      <!-- <ul class="dropdown bg-second" *ngIf="cat.subcategories.length>0">
+            <ng-container *ngFor="let subCat of cat.subcategories">
+              <li class="row " style="z-index: 11;">
+                {{subCat.name}}
+              </li>
+            </ng-container>
+          </ul> -->
+    </li>
+  </ng-container>
+</ul>
