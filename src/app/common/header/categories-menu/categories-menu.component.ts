@@ -27,13 +27,18 @@ export class CategoriesMenuComponent implements OnInit {
     new Category("Jackets", []),
     new Category("Shoes", [])
   ]
+  subcategories: string[] = ["Dresses"]
 
   constructor() { }
 
   ngOnInit() {
   }
-  
-  public onClick() {
+
+  onClick() {
     this.isOpen = !this.isOpen;
+  }
+
+  isOpenSubMenu(category: string): boolean {
+    return this.subcategories.find(c => c == category) != undefined;
   }
 }

@@ -1,5 +1,6 @@
 $pink: #d19c97
 $dark_pink: #c17a74
+$grey: #edf1ff
 
 .categories-btn
     background-color: $pink
@@ -8,12 +9,27 @@ $dark_pink: #c17a74
     cursor: pointer
 
 .category
+    z-index: 5
+    position: relative
     color: #000
     padding: 5px 15px
     cursor: pointer
 
 .category:hover
     color: $pink
+
+.subcategory
+    z-index: 10
+    color: #000!important
+    background-color: inherit
+    position: relative
+    padding: 0 15px
+    margin: 5px 0
+    cursor: pointer
+
+.subcategory:hover
+    color: #000!important
+    background-color: #f8f9fa!important
 
 .categories-btn:hover,
 .categories-btn:focus
@@ -27,11 +43,11 @@ $dark_pink: #c17a74
         height: 50%
 
     100%
-        height: fit-content
+        height: 287.92px
 
 @keyframes .close
     0%
-        height: fit-content
+        height: 287.92px
 
     50%
         height: 50%
@@ -42,16 +58,23 @@ $dark_pink: #c17a74
 .dropdown
     width: 18%
     position: absolute
+    overflow: hidden
 
 .close
     visibility: hidden
-    overflow: hidden
     height: 0
-    transition: 1.8s 1s height, 1.8s 1s width, 2s visibility
+    transition: 0.5s height, 0.5s visibility
+    .submenu
+        display: none
 
 .open
     height: 287.92px
-    overflow: hidden
     visibility: visible
     display: block
-    transition: 1.8s 1s height, 1.8s 1s width, 2s visibility
+    transition: 0.5s height, 0.5s visibility
+
+.submenu
+    width: 100%
+    z-index: 10
+    position: absolute
+    background-color: $grey!important

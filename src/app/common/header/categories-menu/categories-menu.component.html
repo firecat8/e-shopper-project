@@ -4,16 +4,16 @@
 </div>
 <ul class="dropdown" [ngClass]="isOpen?'open':'close'">
   <ng-container *ngFor="let cat of categories">
-    <li class="row ctn-sb grey-border category" style="z-index: 10;">
+    <li class="row ctn-sb grey-border category"  (click)="cat.subcategories.length>0 ?toggle():onClick()">
       {{cat.name}}
       <span class="arrow-down" *ngIf="cat.subcategories.length>0">&#x2304;</span>
-      <!-- <ul class="dropdown bg-second" *ngIf="cat.subcategories.length>0">
-            <ng-container *ngFor="let subCat of cat.subcategories">
-              <li class="row " style="z-index: 11;">
-                {{subCat.name}}
-              </li>
-            </ng-container>
-          </ul> -->
     </li>
+    <ul class="submenu bg-second " *ngIf="cat.subcategories.length>0 && isOpenSubMenu(cat.name)">
+      <ng-container *ngFor="let subCat of cat.subcategories">
+        <li class="row subcategory">
+          {{subCat.name}}
+        </li>
+      </ng-container>
+    </ul>
   </ng-container>
 </ul>
